@@ -50,13 +50,12 @@ const Button = styled.button`
 
 const CreditCard = styled.div``;
 
-const CreditCardNumber = styled.span``;
-
-const CreditCardName = styled.span``;
-
-const CreditCardDateValidation = styled.span``;
-
-const CreditCardSecurityCode = styled.span``;
+const ErrorMsg = styled.span`
+    color: #F00;
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+`;
 
 export {
     FormSectionWrapper,
@@ -66,8 +65,5 @@ export {
     Input,
     Button,
     CreditCard,
-    CreditCardNumber,
-    CreditCardName,
-    CreditCardDateValidation,
-    CreditCardSecurityCode
+    ErrorMsg
 };
