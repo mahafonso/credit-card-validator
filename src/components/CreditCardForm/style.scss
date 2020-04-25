@@ -3,3 +3,55 @@
     outline: none;
     padding: 5px;
 }
+
+.credit-card__item {
+    color: #FFF;
+    display: inline-block;
+    font-size: 17px;
+    position: absolute;
+
+    &.credit-card__number {
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+    }
+
+    &.credit-card__name {
+        bottom: 15%;
+        left: 7.5%;
+        text-transform: uppercase;
+        width: auto;
+    }
+
+    &.credit-card__validate-date {
+        bottom: 15%;
+        right: 7.5%;
+        width: auto;
+
+        .validate-date__text {
+            display: block;
+            font-size: 12px;
+        }
+    }
+
+    // &.credit-card__security-code {
+        
+    // }
+}
+
+.credit-card__brand {
+    background: #FFF;
+    height: 42px;
+    right: 7.5%;
+    top: 15%;
+    width: 60px;
+}
+
+.credit-card__chip {
+    background: #000;
+    left: 7.5%;
+    height: 25px;
+    top: 30%;
+    width: 40px;
+}

@@ -48,7 +48,19 @@ const Button = styled.button`
     }
 `;
 
-const CreditCard = styled.div``;
+const CreditCard = styled.div`
+    border-radius: 14px;
+    height: 180px;
+    position: relative;
+    transition: all .3s ease-in-out;
+    width: 290px;
+
+    &.initial { background: linear-gradient(25deg,#999,#999); }
+
+    &.mastercard { background: linear-gradient(25deg,#f37b26,#fdb731); }
+
+    &.visa { background: linear-gradient(25deg,#0f509e,#1399cd); }
+`;
 
 const ErrorMsg = styled.span`
     color: #F00;

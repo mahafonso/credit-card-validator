@@ -16,10 +16,11 @@ import './style.scss';
 const CreditCardForm = () => {
     const [isValid, handleValidate] = useState(false);
     const [showErrorMessage, handleErrorMessage] = useState(false);
-    const [creditCardNumber, handleCreditCardNumber] = useState('');
-    const [name, handleName] = useState('');
-    const [creditCardValidationDate, handleCreditCardValidationDate] = useState('');
+    const [creditCardNumber, handleCreditCardNumber] = useState('XXXX XXXX XXXX XXXX');
+    const [name, handleName] = useState('NAME');
+    const [creditCardValidationDate, handleCreditCardValidationDate] = useState('XX/XX');
     const [creditCardSecurityCode, handleCreditCardSecurityCode] = useState('');
+    const [creditCardType, handleCreditCardType] = useState('initial');
 
     const validateCreditCard = event => {
         const number = event.target.value.replace(/\s/g, '');
@@ -37,6 +38,10 @@ const CreditCardForm = () => {
         } else {
             handleValidate(false);
             handleErrorMessage(false);
+        } 
+        
+        if (number.length === 0) {
+            handleCreditCardNumber('XXXX XXXX XXXX XXXX');
         }
     }
 
@@ -72,7 +77,7 @@ const CreditCardForm = () => {
 
             <Fieldset>
                 <Label>Name</Label>
-                <Input type="text" name="name" value={name} onChange={event => handleName(event.target.value)} />
+                <InputMask className="input" mask="" type="text" name="name" value={name} onChange={event => handleName(event.target.value)} />
             </Fieldset>
 
             <Fieldset>
@@ -91,13 +96,17 @@ const CreditCardForm = () => {
             </Fieldset>
         </Form>
 
-        <CreditCard>
-            <span className="">{creditCardNumber}</span>
-            <span className="">{name}</span>
-            <span className="">{creditCardValidationDate}</span>
-            <span className="">{creditCardSecurityCode}</span>
+        <CreditCard className={creditCardType}>
+            <span className="credit-card__item credit-card__number">{creditCardNumber}</span>
+            <span className="credit-card__item credit-card__name">{name}</span>
+            <span className="credit-card__item credit-card__validate-date">
+                <span className="validate-date__text">Valid</span> 
+                {creditCardValidationDate}
+            </span>
+            <span className="credit-card__item credit-card__security-code"> {creditCardSecurityCode}</span>
 
-            <img src="../../images/" alt="Credit Card" />
+            <span className="credit-card__item credit-card__chip"></span>
+            <span className="credit-card__item credit-card__brand"></span>
         </CreditCard>
     </FormSectionWrapper>
   );
