@@ -35,23 +35,75 @@
         }
     }
 
-    // &.credit-card__security-code {
-        
-    // }
+    &.credit-card__security-code {
+        align-items: center;
+        color: #000;
+        display: flex;
+        background: #FFF;
+        left: 0;
+        height: 35px;
+        top: 15%;
+        width: 100%;
+    }
 }
 
 .credit-card__brand {
-    background: #FFF;
     height: 42px;
     right: 7.5%;
     top: 15%;
-    width: 60px;
+    transition: all .4s linear;
+    width: 80px;
+
+    &.mastercard {
+        background: url('../../images/credict_card-brand-mastercard.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &.visa {
+        background: url('../../images/credict_card-brand-visa.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    &.americanExpress {
+        background: url('../../images/credict_card-brand-american_express.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &.elo {
+        // background: url('../../images/credict_card-brand-elo.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &.dinnersClub {
+        // background: url('../../images/credict_card-brand-dinners_club.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &.discover {
+        // background: url('../../images/credict_card-brand-discover.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 .credit-card__chip {
-    background: #000;
+    background: url('../../images/credict_card-chip.png');
+    background-position: -10px -10px;
+    background-repeat: no-repeat;
+    background-size: cover;
     left: 7.5%;
-    height: 25px;
+    height: 50px;
     top: 30%;
-    width: 40px;
+    width: 50px;
 }
