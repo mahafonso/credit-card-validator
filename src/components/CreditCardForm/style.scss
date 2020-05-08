@@ -37,13 +37,14 @@
 
     &.credit-card__security-code {
         align-items: center;
+        background: #FFF;
+        bottom: 15%;
         color: #000;
         display: flex;
-        background: #FFF;
-        left: 0;
         height: 35px;
-        top: 15%;
-        width: 100%;
+        left: 50%;
+        position: absolute;
+        width: 90%;
     }
 }
 
@@ -55,45 +56,27 @@
     width: 80px;
 
     &.mastercard {
-        background: url('../../images/credict_card-brand-mastercard.png');
-        background-position: right top;
-        background-repeat: no-repeat;
-        background-size: contain;
+        background: url('../../images/credict_card-brand-mastercard.png') right top / contain no-repeat;
     }
 
     &.visa {
-        background: url('../../images/credict_card-brand-visa.png');
-        background-position: right top;
-        background-repeat: no-repeat;
-        background-size: contain;
+        background: url('../../images/credict_card-brand-visa.png') right top / contain no-repeat;
     }
     
     &.americanExpress {
-        background: url('../../images/credict_card-brand-american_express.png');
-        background-position: right top;
-        background-repeat: no-repeat;
-        background-size: contain;
+        background: url('../../images/credict_card-brand-american_express.png') right top / contain no-repeat;
     }
 
     &.elo {
-        // background: url('../../images/credict_card-brand-elo.png');
-        background-position: right top;
-        background-repeat: no-repeat;
-        background-size: contain;
+        // background: url('../../images/credict_card-brand-elo.png') right top / contain no-repeat;
     }
 
     &.dinnersClub {
-        // background: url('../../images/credict_card-brand-dinners_club.png');
-        background-position: right top;
-        background-repeat: no-repeat;
-        background-size: contain;
+        // background: url('../../images/credict_card-brand-dinners_club.png') right top / contain no-repeat;
     }
 
     &.discover {
-        // background: url('../../images/credict_card-brand-discover.png');
-        background-position: right top;
-        background-repeat: no-repeat;
-        background-size: contain;
+        // background: url('../../images/credict_card-brand-discover.png') right top / contain no-repeat;
     }
 }
 

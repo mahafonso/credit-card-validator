@@ -53,7 +53,6 @@ const CreditCard = styled.div`
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .2);
     height: 180px;
     position: relative;
-    transform-style: preserve-3d;
     transition: background .3s ease-in-out, transform .4s linear;
     width: 290px;
 
@@ -84,7 +83,18 @@ const CreditCard = styled.div`
     }
 
     &.back {
-        transform: rotateY(180deg);
+        position: relative;
+        transform: scaleX(-1);
+
+        &::before {
+            background: #000;
+            content: '';
+            height: 35px;
+            left: 0;
+            position: absolute;
+            top: 15%;
+            width: 100%;
+        }
 
         .credit-card__number,
         .credit-card__name,
@@ -92,7 +102,7 @@ const CreditCard = styled.div`
         .credit-card__chip { opacity: 0; }
 
         .credit-card__brand.bottom {
-            bottom: 15%;
+            bottom: 40%;
             left: 50%;
             right: initial;
             top: initial;
@@ -102,10 +112,10 @@ const CreditCard = styled.div`
         .credit-card__brand.bottom,
         .credit-card__security-code {
             opacity: 1;
-            transform: rotateY(-180deg);
+            transform: scaleX(-1) translateX(50%);
         }
 
-        .credit-card__brand.bottom { transform: translateX(-50%) rotateY(-180deg); }
+        .credit-card__security-code { padding-left: 10px; }
     }
 `;
 
