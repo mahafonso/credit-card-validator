@@ -66,9 +66,17 @@ const CreditCard = styled.div`
 
     &.elo { background: linear-gradient(25deg,#211c18,#aaa7a2); }
     
-    &.dinnersClub { background: #FFF; }
+    &.dinnersClub {
+        background: #FFF;
 
-    &.discover { background: #0F0; }
+        .credit-card__item { color: #000; }
+    }
+
+    &.discover {
+        background: #F4F4F4;
+
+        .credit-card__item { color: #000; }
+    }
 
     .credit-card__item { opacity: 0; }
 

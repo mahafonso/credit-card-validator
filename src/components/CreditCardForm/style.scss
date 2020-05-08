@@ -61,11 +61,13 @@
     
     &.americanExpress { background: url('../../images/credict_card-brand-american_express.png') right top / contain no-repeat; }
 
-    // &.elo { background: url('../../images/credict_card-brand-elo.png') right top / contain no-repeat; }
+    &.elo { background: url('../../images/credict_card-brand-elo.png') right top / contain no-repeat; }
 
-    // &.dinnersClub { background: url('../../images/credict_card-brand-dinners_club.png') right top / contain no-repeat; }
+    &.dinnersClub { 
+        background: url('../../images/credict_card-brand-dinners_club.png') right top / contain no-repeat;
+    }
 
-    // &.discover { background: url('../../images/credict_card-brand-discover.png') right top / contain no-repeat; }
+    &.discover { background: url('../../images/credict_card-brand-discover.png') right top / contain no-repeat; }
 }
 
 .credit-card__chip {
